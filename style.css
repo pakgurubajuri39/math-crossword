@@ -1,1 +1,211 @@
+/* Reset dasar */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    overflow: hidden;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+header h1 {
+    color: #2c3e50;
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+header p {
+    color: #7f8c8d;
+    font-size: 1.2rem;
+}
+
+.controls {
+    background: #ecf0f1;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+.controls label {
+    font-weight: bold;
+    color: #2c3e50;
+}
+.controls select, .controls button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.controls select {
+    background-color: #ffffff;
+    border: 2px solid #3498db;
+}
+.controls button {
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+}
+.controls button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+#btn-check {
+    background-color: #2ecc71;
+}
+#btn-check:hover {
+    background-color: #27ae60;
+}
+#btn-reset {
+    background-color: #e74c3c;
+}
+#btn-reset:hover {
+    background-color: #c0392b;
+}
+
+.game-area {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.grid-container {
+    flex: 1;
+    min-width: 500px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#crossword-grid {
+    display: grid;
+    grid-gap: 0;
+    border: 3px solid #2c3e50;
+    background: #2c3e50;
+}
+.cell {
+    width: 50px;
+    height: 50px;
+    background: white;
+    border: 1px solid #bdc3c7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 1.2rem;
+}
+.cell input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+    background: transparent;
+    outline: none;
+}
+.cell input:focus {
+    background-color: #e8f4fc;
+}
+.cell.black {
+    background-color: #2c3e50;
+}
+.cell-number {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    font-size: 0.7rem;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.clues-container {
+    flex: 1;
+    min-width: 300px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+.clues-container h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #3498db;
+}
+.clues-list {
+    margin-bottom: 25px;
+}
+.clues-list h3 {
+    color: #34495e;
+    margin-bottom: 10px;
+}
+.clues-list ol {
+    list-style-position: inside;
+    padding-left: 10px;
+}
+.clues-list li {
+    margin-bottom: 12px;
+    padding: 8px 12px;
+    background: #ffffff;
+    border-radius: 6px;
+    border-left: 4px solid #3498db;
+    transition: background 0.3s;
+}
+.clues-list li:hover {
+    background: #ecf0f1;
+}
+
+footer {
+    text-align: center;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    padding-top: 20px;
+    border-top: 1px solid #ecf0f1;
+}
+
+/* Responsif */
+@media (max-width: 900px) {
+    .game-area {
+        flex-direction: column;
+    }
+    .grid-container, .clues-container {
+        min-width: 100%;
+    }
+    .cell {
+        width: 40px;
+        height: 40px;
+    }
+}
