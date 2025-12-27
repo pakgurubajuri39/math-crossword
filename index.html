@@ -1,1 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTS Matematika</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="seedrandom.js"></script> <!-- Untuk random yang bisa di-seed -->
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>TTS Matematika</h1>
+            <p>Isi grid dengan jawaban dari soal matematika!</p>
+        </header>
 
+        <div class="controls">
+            <label for="level">Pilih Level:</label>
+            <select id="level">
+                <option value="1">Level 1: Penjumlahan</option>
+                <option value="2">Level 2: Penjumlahan & Pengurangan</option>
+                <option value="3">Level 3: +, -, ×</option>
+                <option value="4">Level 4: +, -, ×, ÷</option>
+            </select>
+            <button id="btn-generate">Buat Puzzle Baru</button>
+            <button id="btn-check">Periksa Jawaban</button>
+            <button id="btn-reset">Reset</button>
+        </div>
+
+        <div class="game-area">
+            <!-- Grid TTS akan di-generate oleh JavaScript -->
+            <div id="crossword-grid" class="grid-container"></div>
+
+            <div class="clues-container">
+                <h2>Petunjuk</h2>
+                <div id="across-clues" class="clues-list">
+                    <h3>Mendatar</h3>
+                    <ol id="across-list"></ol>
+                </div>
+                <div id="down-clues" class="clues-list">
+                    <h3>Menurun</h3>
+                    <ol id="down-list"></ol>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2025 Konsultan Pendidikan. Hosting di GitHub Pages.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
